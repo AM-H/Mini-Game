@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Space Defender</title>
+    <style>
+        canvas {
+            border: 2px solid white;
+            background-color: black;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #111;
+            overflow: hidden;
+        }
+        #gameCanvas {
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+        }
+    </style>
+</head>
+<body>
+    
+    <script type="text/javascript" src="./util.js"></script>
+    
+    <!-- Load game engine components -->
+    <script type="text/javascript" src="./assetmanager.js"></script>
+    <script type="text/javascript" src="./animator.js"></script>
+    <script type="text/javascript" src="./gameengine.js"></script>
+    <script type="text/javascript" src="./gameui.js"></script>
+    
+    <!-- Load game entities -->
+    <script type="text/javascript" src="./background.js"></script>
+    <script type="text/javascript" src="./scout.js"></script>
+    <script type="text/javascript" src="./enemy.js"></script>
+    <script type="text/javascript" src="./bullet.js"></script>
+    
+    <!-- Finally load main script -->
+    <script type="text/javascript" src="./main.js"></script>
+
+    <canvas id="gameCanvas" width="800" height="900" style="background: black" tabindex="0" autofocus></canvas>
+
+    <script>
+        // Prevent space bar from scrolling the page
+        window.addEventListener('keydown', function(e) {
+            if(e.code === 'Space' && e.target === document.body) {
+                e.preventDefault();
+            }
+        });
+
+        // Prevent arrow keys from scrolling the page
+        window.addEventListener('keydown', function(e) {
+            if(['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.code)) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
