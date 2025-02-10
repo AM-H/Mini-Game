@@ -2,7 +2,7 @@ class Background {
     constructor(game) {
         this.game = game;
         
-        this.spritesheet = ASSET_MANAGER.getAsset("./background.png");
+        this.spritesheet = ASSET_MANAGER.getAsset("./Background.png");
     
         
         this.x = 0;
