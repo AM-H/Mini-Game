@@ -5,7 +5,7 @@ const ASSET_MANAGER = new AssetManager();
 // Queue downloads
 ASSET_MANAGER.queueDownload("./Scout.png");
 ASSET_MANAGER.queueDownload("./Enemy.png");
-ASSET_MANAGER.queueDownload("./background.png");
+ASSET_MANAGER.queueDownload("./Background.png");
 
 
 ASSET_MANAGER.downloadAll(() => {
